@@ -1,0 +1,11 @@
+Desafio próxima aula
+
+Pegar o código de leitura de arquivo de texto
+
+Fazer a leitura do arquivo e inserir as informações dentro do arraylist
+
+Em seguida: ordernar o arraylist
+
+Escolher um número existente (OrderID)
+
+Aplicar a busca binária no arraylist gerado e mostrar o resultado
