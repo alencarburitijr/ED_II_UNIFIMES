@@ -1,5 +1,3 @@
-import java.io.*;
-import java.util.*;
 //classe Aluno com cinco atributos representando os dados dos alunos 
 public class Aluno {
     int matricula;

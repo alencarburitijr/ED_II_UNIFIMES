@@ -18,32 +18,33 @@ public class ArvoreBinariaOrdenada {
 
         Arvore MaryJane = new Arvore();
         System.out.println("EXEMPLO DE ARVORE BINARIA");
+        Scanner teclado = new Scanner(System.in);
 
         while(repeteOperacao==true){
             System.out.println("Digite:");
             System.out.println("1 para inserir nós na árvore");
             System.out.println("2 para remover nós da árvore");
             System.out.println("3 para exibir os nós da árvore em ordem crescente do número de matrícula");
-            funcao = SavitchIn.readLineInt();
+            funcao = teclado.nextInt();
             if(funcao==1){
                 continua=true;
                 while(continua==true){
                     System.out.println("Digite a matricula do aluno que quer incluir na árvore");
-                    matricula=SavitchIn.readLineInt();
+                    matricula = teclado.nextInt();
                     System.out.println("Digite o nome do aluno que quer incluir na árvore");
-                    nome=SavitchIn.readLineWord();
+                    nome=teclado.next();
                     System.out.println("Digite a disciplina do aluno que quer incluir na árvore");
-                    disciplina=SavitchIn.readLineWord();
+                    disciplina=teclado.next();
                     for(int i=0;i<notas.length;i++){
                         System.out.println("Digite a "+(1+i)+"ª nota do aluno que quer incluir na árvore");
-                        notas[i]=SavitchIn.readLineDouble();
+                        notas[i]=teclado.nextDouble();
                     }
 
                     Aluno UNIFIMES=new Aluno(matricula,nome,disciplina,notas);//cria objetos do tipo Aluno
                     MaryJane.insereNo(UNIFIMES);
                     resposta="";
                     System.out.println("Deseja incluir mais um aluno? (S/N)");
-                    resposta=SavitchIn.readLineWord();
+                    resposta=teclado.next();
                     if(resposta.equals("s")||resposta.equals("S")){
                         continua=true;
                     }
@@ -56,11 +57,11 @@ public class ArvoreBinariaOrdenada {
                 continua=true;
                 while(continua==true){
                     System.out.println("Digite a matricula do aluno que deseja remover da árvore");
-                    RemoverMatricula=SavitchIn.readLineInt();
+                    RemoverMatricula=teclado.nextInt();
                     MaryJane.removeNo(RemoverMatricula);
                     resposta="";
                     System.out.println("Deseja excluir mais um aluno? (S/N)");
-                    resposta=SavitchIn.readLineWord();
+                    resposta=teclado.next();
                     if(resposta.equals("s")||resposta.equals("S")){
                         continua=true;
                     }
@@ -78,7 +79,7 @@ public class ArvoreBinariaOrdenada {
                     System.out.println("");
                     resposta="";
                     System.out.println("Deseja exibir a arvore mais uma vez? (S/N)");
-                    resposta=SavitchIn.readLineWord();
+                    resposta=teclado.next();
                     if(resposta.equals("s")||resposta.equals("S")){
                         continua=true;
                     }
@@ -89,7 +90,7 @@ public class ArvoreBinariaOrdenada {
             }
             respostaRepeticao="";
             System.out.println("Deseja realizar outra operacao? (S/N)");
-            respostaRepeticao=SavitchIn.readLineWord();
+            respostaRepeticao=teclado.next();
             if(respostaRepeticao.equals("s")||respostaRepeticao.equals("S")){
                 repeteOperacao=true;
             }
