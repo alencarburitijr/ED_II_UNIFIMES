@@ -33,13 +33,6 @@ public class Aresta<TIPO> {
         this.fim = fim;
     }
 
-    public void adicionarAresta(ArrayList<Vertice<TIPO>> verticeEntrada, ArrayList<Vertice<TIPO>> verticeSaida,
-            Object valor) {
-        verticeSaida.add(verticeEntrada);
-        verticeEntrada.add(verticeSaida);
-
-    }
-
     // Implementar na próxima aula
     public void removerVertice() {
 
