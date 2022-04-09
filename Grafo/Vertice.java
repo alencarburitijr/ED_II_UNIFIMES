@@ -11,28 +11,32 @@ public class Vertice<TIPO> {
         this.arestasSaida = new ArrayList<Aresta<TIPO>>();
     }
 
-    public TIPO getDado(){
+    public TIPO getDado() {
         return this.dado;
     }
-    public void setDado(TIPO valor){
+
+    public void setDado(TIPO valor) {
         this.dado = valor;
     }
 
-    public void adicionarArestaEntrada(Aresta<TIPO> aresta)   {
-this.arestasEntrada.add(aresta);
+    public void adicionarArestaEntrada(Aresta<TIPO> aresta) {
+        this.arestasEntrada.add(aresta);
     }
-    public void adicionarArestaSaida(Aresta<TIPO> aresta)   {
-            this.arestasSaida.add(aresta);
+
+    public void adicionarArestaSaida(Aresta<TIPO> aresta) {
+        this.arestasSaida.add(aresta);
     }
 
     ArrayList<Vertice<TIPO>> verticeEntrada;
     ArrayList<Vertice<TIPO>> verticeSaida;
-    public void adicionarVertice(ArrayList<Vertice<TIPO>> verticeEntrada){   
+
+    public void adicionarVertice(ArrayList<Vertice<TIPO>> verticeEntrada) {
         verticeSaida = new ArrayList<Vertice<TIPO>>();
         adicionarAresta(verticeEntrada, verticeSaida, valor);
-
     }
-    public void removerVertice(){
+
+    // Implementar na próxima aula
+    public void removerVertice() {
 
     }
 }
