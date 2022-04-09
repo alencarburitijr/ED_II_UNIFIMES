@@ -26,15 +26,6 @@ public class Vertice<TIPO> {
     public void adicionarArestaSaida(Aresta<TIPO> aresta) {
         this.arestasSaida.add(aresta);
     }
-
-    ArrayList<Vertice<TIPO>> verticeEntrada;
-    ArrayList<Vertice<TIPO>> verticeSaida;
-
-    public void adicionarVertice(ArrayList<Vertice<TIPO>> verticeEntrada) {
-        verticeSaida = new ArrayList<Vertice<TIPO>>();
-        adicionarAresta(verticeEntrada, verticeSaida, valor);
-    }
-
     // Implementar na próxima aula
     public void removerVertice() {
 
